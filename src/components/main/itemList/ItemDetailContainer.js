@@ -1,8 +1,8 @@
-import ItemDetail from "./item/ItemDetail";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { getProductById } from "../../../firebase/firebase";
+import ItemDetail from "../item/ItemDetail";
 import SpinnerComp from "../utils/spinner/Spinner";
 import "./ItemDetailContainer.css";
 

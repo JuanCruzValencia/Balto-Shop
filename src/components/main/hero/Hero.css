@@ -15,4 +15,5 @@
 
 .signin__btn:hover {
   background-color: #f98e72 !important;
+  border: none;
 }

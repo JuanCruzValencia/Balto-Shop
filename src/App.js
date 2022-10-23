@@ -12,7 +12,7 @@ import ItemListContainer from "./components/main/itemList/ItemListContainer";
 import ItemDetailContainer from "./components/main/itemList/ItemDetailContainer";
 import Cart from "./components/main/cart/Cart";
 import Register from "./components/main/user/register/Register";
-import Login from "./components/main/user/register/Login";
+import Login from "./components/main/user/login/Login";
 import { Checkout } from "./components/main/checkout/Checkout";
 import Footer from "./components/footer/Footer";
 // firebase/firestore
