@@ -42,7 +42,6 @@ export const getProductById = (id) => {
 export const setAllProducts = async (data) => {
   const db = getFirestore();
   const ref = await getDocs(collection(db, "items"));
-  console.log(ref)
   if (typeof ref === "undefined") {
     addDoc(collection(db, "items"), {
       title: data.title,

@@ -1,8 +1,12 @@
 # Balto's Shop - E-commerce React App Project
 
-Link to live version - [Balto's Shop]()
+Link to live version - [Balto's Shop](https://juancruzvalencia.github.io/Balto-Shop/)
 
 Balto's Shop is a e-commerce web application that allows users to search for products stored in Firestore, add them to shopping cart and then make payment. App has login system functionality. The guest user is able to browse and add product to cart only. Checkout and payment option is available for registerd users.
+
+## DEMO
+
+![](https://firebasestorage.googleapis.com/v0/b/balto-s-shop.appspot.com/o/balto-shop-demo.gif?alt=media&token=d1267a81-f163-4208-b3f7-0300be136d1c)
 
 ## UX
 The purpose of the the project is to create a e-commerce app for react couse in CoderHouse. Layout is simple and clear. Project is accesible through both desktop and mobile devices. For build the front-end functionality React JS is used and for back-end, Firebase is used.
