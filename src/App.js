@@ -21,6 +21,7 @@ import { firebaseConfig } from "./firebase/fireStore";
 import { initializeApp } from "firebase/app";
 // styles
 import "./App.css";
+import { setAllProducts } from "./firebase/firebase";
 
 initializeApp(firebaseConfig);
 
@@ -29,11 +30,11 @@ function App() {
 
   useEffect(() => {
     if (fetchStatus.current === false) {
-      getProductsFromApi();
-    }
-    return () => {
+      getProductsFromApi().then(products => {
+        products.map(product => setAllProducts(product))
+      })
       fetchStatus.current = true;
-    };
+    }
   }, []);
 
   return (

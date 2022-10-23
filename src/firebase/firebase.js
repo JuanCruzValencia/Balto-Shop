@@ -41,14 +41,18 @@ export const getProductById = (id) => {
 // Guarda en una nueva coleccion 'items' en firestore
 export const setAllProducts = async (data) => {
   const db = getFirestore();
-  await addDoc(collection(db, "items"), {
-    title: data.title,
-    category: data.category,
-    price: data.price,
-    description: data.description,
-    image: data.image,
-    stock: 50,
-  });
+  const ref = await getDocs(collection(db, "items"));
+  console.log(ref)
+  if (typeof ref === "undefined") {
+    addDoc(collection(db, "items"), {
+      title: data.title,
+      category: data.category,
+      price: data.price,
+      description: data.description,
+      image: data.image,
+      stock: 50,
+    });
+  }
 };
 
 // Funcion para crear las ordenes
@@ -102,4 +106,3 @@ export const getUser = (email) => {
   const userData = query(collection(db, "users"), where("email", "==", email));
   return getDocs(userData);
 };
-

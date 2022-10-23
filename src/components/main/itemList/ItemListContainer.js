@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import { getAllProducts, getProductsByCategory } from "../../../firebase/firebase";
+import {
+  getAllProducts,
+  getProductsByCategory,
+} from "../../../firebase/firebase";
 import ItemList from "./ItemList";
 import SpinnerComp from "../utils/spinner/Spinner";
 import "./ItemListContainer.css";
