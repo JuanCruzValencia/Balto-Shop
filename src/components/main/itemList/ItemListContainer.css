@@ -1,0 +1,30 @@
+.shop__container {
+  margin: 0;
+  height: 100%;
+  padding: 100px 0;
+  min-width: 100%;
+  background-color: #FFD5AA;
+}
+
+.shop__title {
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#cards__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1000px) {
+  .shop__container {
+    padding: 1rem;
+  }
+}

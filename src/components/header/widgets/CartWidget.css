@@ -1,0 +1,21 @@
+.cart__count {
+    position: absolute;
+    right: 55px;
+    top: 45px;
+    height: 15px;
+    width: 15px;
+    color: #fff;
+    background-color: red;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.icons__li {
+    font-size: 1.5em;
+    padding-left: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

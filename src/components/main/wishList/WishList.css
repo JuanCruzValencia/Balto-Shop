@@ -1,0 +1,28 @@
+.bg-color {
+    background-color: #FFD5AA;
+}
+
+.header-color {
+    background-color:#FAF1CB;
+}
+
+.heart__icon {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.heart__icon--red {
+    font-size: 2em;
+    cursor: pointer;
+    color: red;
+}
+
+.wishList__btn {
+  background-color: #bd5a42;
+  font-weight: 800;
+  border: none;
+}
+
+.wishList__btn:hover {
+    background-color: #f98e72 !important;
+  }
