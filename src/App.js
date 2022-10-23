@@ -37,7 +37,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="Balto-Shop">
       <UserContextProvider>
         <CartContextProvider>
           <WishListContextProvider>
