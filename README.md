@@ -6,7 +6,7 @@ Balto's Shop is a e-commerce web application that allows users to search for pro
 
 ## DEMO
 
-![](https://firebasestorage.googleapis.com/v0/b/balto-s-shop.appspot.com/o/balto-shop-demo.gif?alt=media&token=d1267a81-f163-4208-b3f7-0300be136d1c)
+![](https://firebasestorage.googleapis.com/v0/b/balto-s-shop.appspot.com/o/ezgif.com-gif-maker.gif?alt=media&token=be482bf6-b2fa-4136-ab57-625302fbf6cc)
 
 ## UX
 The purpose of the the project is to create a e-commerce app for react couse in CoderHouse. Layout is simple and clear. Project is accesible through both desktop and mobile devices. For build the front-end functionality React JS is used and for back-end, Firebase is used.
