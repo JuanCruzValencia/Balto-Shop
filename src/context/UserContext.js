@@ -31,7 +31,7 @@ export const UserContextProvider = ({ children }) => {
       setUserState(data);
       //enviar a la pagina principal
     } catch (error) {
-      alert(error);
+      alert(error.message);
     }
   };
 
@@ -45,7 +45,7 @@ export const UserContextProvider = ({ children }) => {
       const resolve = await getUser(email);
       setUserState(resolve.docs[0].data());
     } catch (error) {
-      alert(error);
+      alert(error.message);
     }
   };
 

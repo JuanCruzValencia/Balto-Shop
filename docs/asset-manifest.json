@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Balto-Shop/static/css/main.19dad0e2.css",
-    "main.js": "/Balto-Shop/static/js/main.3394d7f0.js",
+    "main.css": "/Balto-Shop/static/css/main.10fb3e82.css",
+    "main.js": "/Balto-Shop/static/js/main.2134b4af.js",
     "index.html": "/Balto-Shop/index.html",
-    "main.19dad0e2.css.map": "/Balto-Shop/static/css/main.19dad0e2.css.map",
-    "main.3394d7f0.js.map": "/Balto-Shop/static/js/main.3394d7f0.js.map"
+    "main.10fb3e82.css.map": "/Balto-Shop/static/css/main.10fb3e82.css.map",
+    "main.2134b4af.js.map": "/Balto-Shop/static/js/main.2134b4af.js.map"
   },
   "entrypoints": [
-    "static/css/main.19dad0e2.css",
-    "static/js/main.3394d7f0.js"
+    "static/css/main.10fb3e82.css",
+    "static/js/main.2134b4af.js"
   ]
 }

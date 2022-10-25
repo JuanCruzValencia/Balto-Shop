@@ -14,6 +14,7 @@ import Cart from "./components/main/cart/Cart";
 import Register from "./components/main/user/register/Register";
 import Login from "./components/main/user/login/Login";
 import { Checkout } from "./components/main/checkout/Checkout";
+import { About } from "./components/main/about/About";
 import Footer from "./components/footer/Footer";
 // firebase/firestore
 import { getProductsFromApi } from "./firebase/api/fetch";
@@ -63,6 +64,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/checkout" element={<Checkout />} />
+                <Route path="/about" element={<About />} />
               </Routes>
               <Footer />
             </div>
