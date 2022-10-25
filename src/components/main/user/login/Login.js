@@ -32,6 +32,7 @@ function Login() {
                 type="text"
                 className="login__input"
                 onChange={handleChange}
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
                 name="email"
               />
             </Form.Group>
@@ -41,6 +42,7 @@ function Login() {
                 type="password"
                 className="login__input"
                 onChange={handleChange}
+                pattern="[A-Za-z0-9_-]*"
                 name="password"
               />
             </Form.Group>

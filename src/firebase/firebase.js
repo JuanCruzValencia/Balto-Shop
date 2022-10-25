@@ -83,7 +83,7 @@ export const setUser = async (data) => {
     name: data.name,
     email: data.email,
     password: data.password,
-    phoneNumber: data.phone,
+    phone: data.phone,
     adress: data.adress,
     uid: data.uid,
   };

@@ -7,7 +7,8 @@ import { setOrder } from "../../../firebase/firebase";
 import "./Checkout.css";
 
 export const Checkout = () => {
-  const { cartList, totals, removeList } = useContext(CartContext);
+  const { cartList, totals, removeList, validateCart } =
+    useContext(CartContext);
   const { userState } = useContext(UserContext);
   const [orderId, setOrderId] = useState("");
   const { form, handleChange } = useForm({
@@ -18,16 +19,26 @@ export const Checkout = () => {
   });
 
   const handleClick = async () => {
-    const orderId = await setOrder(userState, cartList, totals);
-    setOrderId(orderId);
-    removeList();
+    if (validateCart()) {
+      const orderId = await setOrder(userState, cartList, totals);
+      if (cartList) {
+        setOrderId(orderId);
+        removeList();
+      }
+    } else {
+      alert(`Stock insuficiente`);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const orderId = await setOrder(form, cartList, totals);
-    setOrderId(orderId);
-    removeList();
+    if (validateCart()) {
+      const orderId = await setOrder(form, cartList, totals);
+      setOrderId(orderId);
+      removeList();
+    } else {
+      alert(`Stock insuficiente`);
+    }
   };
 
   return (
@@ -81,6 +92,7 @@ export const Checkout = () => {
                 type="text"
                 className="checkout__input"
                 name="name"
+                pattern="[a-zA-Z][a-zA-Z ]{2,}"
                 onChange={handleChange}
               />
               <Form.Label>Telefono</Form.Label>
@@ -88,6 +100,7 @@ export const Checkout = () => {
                 type="text"
                 className="checkout__input"
                 name="phone"
+                pattern="[0-9]*"
                 onChange={handleChange}
               />
               <Form.Label>Email</Form.Label>
@@ -95,6 +108,7 @@ export const Checkout = () => {
                 type="email"
                 className="checkout__input"
                 name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
                 onChange={handleChange}
               />
               <Form.Label>Reingrese Email</Form.Label>
@@ -102,6 +116,7 @@ export const Checkout = () => {
                 type="email"
                 className="checkout__input"
                 name="emailValidate"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
                 onChange={handleChange}
               />
             </Form.Group>

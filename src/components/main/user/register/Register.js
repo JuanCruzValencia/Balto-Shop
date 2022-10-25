@@ -43,6 +43,7 @@ function Register() {
                   placeholder="name"
                   className="register__input"
                   name="name"
+                  pattern="[a-zA-Z][a-zA-Z ]{2,}"
                   onChange={handleChange}
                 />
                 <Form.Label>Email</Form.Label>
@@ -51,6 +52,7 @@ function Register() {
                   placeholder="Enter email"
                   className="register__input"
                   name="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
                   onChange={handleChange}
                 />
               </Form.Group>
@@ -61,6 +63,7 @@ function Register() {
                   placeholder="Password"
                   className="register__input"
                   name="password"
+                  pattern="[A-Za-z0-9_-]*"
                   onChange={handleChange}
                 />
                 <Form.Label>Repita Contrasena</Form.Label>
@@ -69,6 +72,7 @@ function Register() {
                   placeholder="Password"
                   className="register__input"
                   name="passwordConfirm"
+                  pattern="[A-Za-z0-9_-]*"
                   onChange={handleChange}
                 />
               </Form.Group>
@@ -80,6 +84,7 @@ function Register() {
                   placeholder="1234 Main St"
                   className="register__input"
                   name="adress"
+                  pattern="[A-Za-z_-]?[A-Za-z0-9_-]?{2,}"
                   onChange={handleChange}
                 />
               </Form.Group>
@@ -88,6 +93,7 @@ function Register() {
                 <Form.Control
                   className="register__input"
                   name="phone"
+                  pattern="[0-9]*"
                   onChange={handleChange}
                 />
               </Form.Group>

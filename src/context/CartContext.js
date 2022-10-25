@@ -44,6 +44,14 @@ export function CartContextProvider({ children }) {
     }
   };
 
+  const validateCart = () => {
+    let result = false
+    cartList.map((item) => {
+      return item.quantity > item.stock ? result = false : result = true;
+    });
+    return result
+  };
+
   const data = {
     cartList,
     addToCart,
@@ -51,6 +59,7 @@ export function CartContextProvider({ children }) {
     deleteItem,
     totals,
     cartLength,
+    validateCart,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

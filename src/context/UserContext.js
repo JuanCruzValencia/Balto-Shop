@@ -41,7 +41,6 @@ export const UserContextProvider = ({ children }) => {
   const signIn = async ({ email, password }) => {
     const auth = getAuth();
     try {
-      console.log(email, password);
       await signInWithEmailAndPassword(auth, email, password);
       const resolve = await getUser(email);
       setUserState(resolve.docs[0].data());

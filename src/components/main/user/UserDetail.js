@@ -8,12 +8,13 @@ import "./UserDetail.css";
 export const UserDetail = () => {
   const { userState, logOut } = useContext(UserContext);
   const [orders, setOrders] = useState([]);
-
   useEffect(() => {
+    const { email } = userState;
     getAllOrders().then((snapshot) => {
-      setOrders(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      const allOrders = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+      setOrders(allOrders.filter(order => order.buyer.email.includes(email)))
     });
-  }, []);
+  }, [userState]);
 
   return (
     <Container className="userDetail__container">
