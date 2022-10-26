@@ -14,12 +14,21 @@ function ItemDetailContainer() {
   useEffect(() => {
     getProductById(id).then((snapshot) => {
       if (!snapshot.exists()) {
-        console.log("No se encontro el item que esta buscando");
+        setSelectedProduct(undefined);
+        return;
       }
       setSelectedProduct({ id: snapshot.id, ...snapshot.data() });
       setIsLoading(false);
     });
   }, [id]);
+
+  if (selectedProduct === undefined) {
+    return (
+      <Container className="itemDetail__container">
+        <h3>Producto No encontrado</h3>
+      </Container>
+    );
+  }
 
   return (
     <Container className="itemDetail__container">

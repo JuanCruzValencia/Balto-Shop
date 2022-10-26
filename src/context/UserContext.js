@@ -45,7 +45,10 @@ export const UserContextProvider = ({ children }) => {
       const resolve = await getUser(email);
       setUserState(resolve.docs[0].data());
     } catch (error) {
-      alert(error.message);
+      if (error.code === "auth/wrong-password") {
+        alert("La contrasena ingresada es incorrecta");
+      }
+      alert("El usuario ingresado es incorrecto");
     }
   };
 
