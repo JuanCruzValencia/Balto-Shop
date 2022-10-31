@@ -32,12 +32,16 @@ export const Checkout = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateCart()) {
-      const orderId = await setOrder(form, cartList, totals);
-      setOrderId(orderId);
-      removeList();
+    if (form.email === form.emailValidate) {
+      if (validateCart()) {
+        const orderId = await setOrder(form, cartList, totals);
+        setOrderId(orderId);
+        removeList();
+      } else {
+        alert(`Stock insuficiente`);
+      }
     } else {
-      alert(`Stock insuficiente`);
+      alert("Los email ingresados no coinciden");
     }
   };
 
